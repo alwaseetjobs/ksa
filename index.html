@@ -1,0 +1,1161 @@
+﻿<html>
+<head>
+<link rel="shortcut icon" />
+<meta charset="utf-8">
+<title>الوسيط للتوظيف</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<style type="text/css">
+.registration-form-wrap { font-family: 'Roboto', sans-serif; width: 70%; padding: 0; margin: 0 auto; border: 1px solid #ccc; }
+.top-grey, .middle-grey, .bottom-grey, .last-grey { background: #eaeaea; }
+/*.middle-grey { background: #e4e4e4; }
+.bottom-grey { background: #d4d4d4; }
+.last-grey { background: #cacaca; }*/
+.common-padding { padding: 30px 10px; }
+a, a:hover, a:focus { text-decoration: none; color: #f09414; }
+.flex { display: flex; display: -ms-flexbox; -ms-flex-wrap: wrap; flex-wrap: wrap; align-items: center; }
+.img-fluid { display: inline-block; max-width: 100%; height: auto; }
+/***** Common Spacing CSS *****/
+.padding10x { padding: 10px; }
+.padding20x { padding: 20px; }
+.padding1x { padding-top: 10px; padding-bottom: 10px; }
+.padding2x { padding-top: 20px; padding-bottom: 20px; }
+.padding3x { padding-top: 30px; padding-bottom: 30px; }
+.padding4x { padding-top: 40px; padding-bottom: 40px; }
+.padding5x { padding-top: 50px; padding-bottom: 50px; }
+.padding6x { padding-top: 60px; padding-bottom: 60px; }
+.paddingtop1x { padding-top: 10px; }
+.paddingtop2x { padding-top: 20px; }
+.paddingtop3x { padding-top: 30px; }
+.paddingtop4x { padding-top: 40px; }
+.paddingtop5x { padding-top: 50px; }
+.paddingtop6x { padding-top: 60px; }
+.paddingtop7x { padding-top: 70px; }
+.paddingtop8x { padding-top: 80px; }
+.paddingbottom1x { padding-bottom: 10px; }
+.paddingbottom2x { padding-bottom: 20px; }
+.paddingbottom3x { padding-bottom: 30px; }
+.paddingbottom4x { padding-bottom: 40px; }
+.paddingbottom5x { padding-bottom: 50px; }
+.paddingbottom6x { padding-bottom: 60px; }
+.paddingbottom7x { padding-bottom: 70px; }
+.paddingbottom8x { padding-bottom: 80px; }
+.spacetop-xs { margin-top: 5px; }
+.spacetop1x { margin-top: 10px; }
+.spacetop2x { margin-top: 20px; }
+.spacetop3x { margin-top: 30px; }
+.spacetop4x { margin-top: 40px; }
+.spacetop5x { margin-top: 50px; }
+.spacetop6x { margin-top: 60px; }
+.spacetop7x { margin-top: 70px; }
+.spacetop8x { margin-top: 80px; }
+.spacebottom1x { margin-bottom: 10px; }
+.spacebottom2x { margin-bottom: 20px; }
+.spacebottom3x { margin-bottom: 30px; }
+.spacebottom4x { margin-bottom: 40px; }
+.spacebottom5x { margin-bottom: 50px; }
+.spacebottom6x { margin-bottom: 60px; }
+.no-margin { margin: 0 !important; }
+/***** Common Heading CSS Style *****/
+.main-heading { background-color: rgb(4 90 160); padding: 15px 0; margin: 0; text-align: center; color: #fff; font-size: 25px; text-transform: uppercase; }
+.lg-heading, .md-heading, .sm-heading, .xs-heading { position: relative; }
+.lg-heading, .md-heading, .sm-heading, .xs-heading { font-size: 26px; color: #f5a81c; margin-top: 0; margin-bottom: 8px; text-transform: uppercase; line-height: 22px; letter-spacing: inherit; }
+.md-heading { background-color: #f09414; font-size: 20px; color: #fff; margin-top: 0; margin-bottom: 0; text-align: center; padding: 10px 5px; }
+.sm-heading { font-size: 20px; margin-top: 10px; margin-bottom: 10px; line-height: 18px; }
+.xs-heading { font-size: 16px; color: #f5a81c; margin-top: 0; margin-bottom: 12px; line-height: 12px; }
+.lg-text { font-size: 18px; }
+.md-text { font-size: 16px; }
+.sm-text { font-size: 12px; }
+/***** Form CSS *****/
+form { margin: 0; }
+.form-group { position: relative; margin-bottom: 25px; display: flex; display: -ms-flexbox; -ms-flex-wrap: wrap; flex-wrap: wrap; align-items: center; }
+.form-group label { font-size: 14px; font-weight: normal; font-family: 'Roboto', sans-serif; color: #444; width: 26%; float: left; position: relative; margin-bottom: 0; text-align: left; }
+.form-control, .form-control:focus, textarea.form-control { background: #fff; border-width: 1px; border-color: #bbbbbb; border-style: solid; border-radius: 0; color: #444444; height: 36px; position: relative; width: 100%; float: left; display: inline-block; font-size: 14px; padding: 6px 10px; box-shadow: none; }
+.form-control.countryCode { width: 45%; margin-right: 2%; }
+.form-control.web-address { background: #cecece !important; width: 15%; margin-right: 2%; }
+.form-control.country-code { text-align: center; border-width: 1px; }
+.form-control.full-border { border-width: 1px; }
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control { background-color: #eaeaea; color: #444; }
+textarea.form-control, textarea.form-control:focus { height: 80px; }
+.form-group .input-group-addon { padding: 6px 12px; font-size: 14px; line-height: 1; color: #fff; text-align: center; background-color: #004a98; border-radius: 0; border-width: 1px 1px 1px 0; border-color: #bbbbbb; border-style: solid; cursor: pointer; }
+.form-group .input-group { align-items: center; width: 100%; }
+.pswrd-eye { position: absolute; top: 10px; right: 10px; color: #bbbbbb; cursor: pointer; z-index: 9999; }
+.form-error { position: absolute; margin: 0; font-size: 11px; bottom: -16px; left: 0; color: #ce0000; width: 100%; text-align: right; letter-spacing: 0.5px; }
+.success-msg { background: #e5ffe9; padding: 0; margin: 20px 30px 0; position: relative; text-align: center; border: 1px solid #75c582; color: #75c582; }
+.msg-header { position: relative; }
+.msg-header .small-heading { color: #3a7543; padding-top: 12px; }
+.close-btn { margin-top: 0px; position: absolute; z-index: 1; right: -10px; top: -12px; text-shadow: none; background: #75c582; color: #fff; opacity: 1; line-height: 0; padding: 12px 7px; border-radius: 20px; font-size: 18px; border: none; }
+.msg-body { padding: 8px 20px; }
+.en-text, .ar-text { width: 26%; float: left; font-weight: normal; }
+.ar-text { font-family: 'Almarai', sans-serif !important; direction: rtl; text-align: right !important; }
+.ar-font { font-family: 'Almarai', sans-serif !important; direction: rtl; }
+.red { color: #ea0000; }
+.verification-wrap { background: #eaeaea; padding: 20px 25px; display: flex; display: -ms-flexbox; -ms-flex-wrap: wrap; flex-wrap: wrap; align-items: center; }
+.captcha-box { background: #004a98; padding: 6px 5px; color: #fff; border-width: 1px; border-color: #004a98; border-style: solid; border-radius: 0; margin-left: 2%; float: left; width: 28%; text-align: center; font-size: 16px; }
+.verification-box { width: 48%; float: left; position: relative; }
+.verification-box .form-control, .verification-box .form-control:focus { width: 48%; }
+.refresh-btn { margin-top: 8px; margin-left: 8px; cursor: pointer; color: #f09414; font-size: 20px; width: 6%; float: left; text-align: center; }
+.w64 { width: 62%; display: flex; align-items: center; }
+.small-box { width: 8%; margin: 0 0.7%; }
+.small-box .form-control { width: 100%; text-align: center; }
+.verify-btn { background: #004a98; padding: 6px 20px; color: #fff; border-width: 1px; border-color: #004a98; border-style: solid; border-radius: 0; margin-left: 0; float: none; width: auto; text-align: center; font-size: 16px; margin: 15px auto 0; }
+.verify-btn:hover, .verify-btn:focus { outline: none; }
+.w60 { width: 48%; display: flex; align-items: center; }
+.info-box { clear: both; list-style: none; margin: 0; padding: 0; position: relative; top: 10px; text-align: center; }
+.info-box li { display: inline-block; padding: 0 10px; border-left: 1px solid #bbbbbb; }
+.info-box li:first-child { border-left: none; }
+.info-box li:last-child { padding-right: 0; }
+.info-box li a, .info-box li a:hover, .info-box li a:focus { color: #004a98; }
+.form-group span.error, .verification-box span.error, .file-drop-area span.error { position: absolute; margin: 0; font-size: 11px; color: #bf0400; bottom: -17px; }
+.verification-box span.error, .file-drop-area span.error { left: 0; }
+.input-group span.error { position: relative; bottom: -3px; }
+.tooltip { position: relative; opacity: 1; display: inline-block; }
+.tooltip__item { font-family: 'Roboto', sans-serif; font-style: normal; font-weight: 300; font-size: 11px; position: absolute; min-width: 210px; padding: 10px; visibility: hidden; opacity: 0; background: #444; transition: all 0.25s cubic-bezier(0, 0, 0.2, 1); color: #fff; z-index: 4; }
+.tooltip__item:after { content: ""; display: block; position: absolute; width: 0; height: 0; border-style: solid; }
+.tooltip__initiator { cursor: pointer; z-index: 5; }
+.tooltip[data-direction="left"] .tooltip__initiator:hover ~ .tooltip__item { /*transform: translate3d(0, -52%, 0);*/ visibility: visible; opacity: 1; }
+.tooltip[data-direction="left"] .tooltip__item { top: 50%; right: calc(-100% + 5px); transform: translate3d(100%, -50%, 0); }
+.tooltip[data-direction="left"] .tooltip__item:after { top: 50%; left: -6px; transform: translate3d(0, -50%, 0); border-width: 6px 6px 6px 0; border-color: transparent #444 transparent transparent; }
+.fa.fa-info-circle { font-size: 16px; color: #5a5a5a; }
+/***** AR tooltip ******/
+.ar-text .tooltip__item { font-family: 'Almarai', sans-serif !important; }
+.ar-text .tooltip[data-direction="left"] .tooltip__item { right: calc(0% + 5px); transform: translate3d(-8%, -50%, 0); }
+.ar-text .tooltip[data-direction="left"] .tooltip__item:after { left: auto; right: -6px; transform: translate3d(0, -50%, 0); border-width: 6px 0 6px 6px; border-color: transparent transparent transparent #444; }
+/***** Placeholder ******/
+.form-control::placeholder {
+ color: #898989;
+ opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+ color: #898989;
+}
+.form-control::-ms-input-placeholder {
+ color: #898989;
+}
+/***** Checbox CSS Style ******/
+/*** Custom checkbox ***/
+.custom-control label { font-family: 'Roboto', sans-serif; font-size: 14px; margin-bottom: 12px; }
+.custom-control-input:checked ~ .custom-control-label::before { border-color: #004a98; background-color: #004a98; }
+.custom-control-label::before { border: #7b7b7b solid 1px; }
+/******/
+.checkbox { margin-top: 8px; margin-bottom: 8px; padding-left: 10px; padding-right: 10px; }
+.checkbox label { font-size: 14px; padding-left: 0; }
+.checkbox label:after { content: ''; display: table; clear: both; }
+.checkbox .cr { position: relative; color: #004a98; display: inline-block; border: 1px solid #004a98; border-radius: 2px; width: 20px; height: 20px; margin-right: 0; margin-top: 6px; }
+.checkbox .cr .cr-icon { position: absolute; font-size: 16px; line-height: 0; top: 50%; left: 2%; }
+.checkbox .acceptance { padding-left: 0; color: #000; }
+.en-label, .ar-label { width: 45%; }
+.tick { width: 10%; float: left; text-align: center; }
+.alert-info .en-label, .alert-info .ar-label, .alert-warning .en-label, .alert-warning .ar-label { width: 50%; }
+/*.checkbox label input[type="checkbox"] { display: none; }*/
+.checkbox label input[type="checkbox"] { opacity: 0; }
+.checkbox label input[type="checkbox"] + .cr > .cr-icon { transform: scale(3) rotateZ(-20deg); opacity: 0; transition: all .3s ease-in; }
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon { transform: scale(1) rotateZ(0deg); opacity: 1; }
+.checkbox label input[type="checkbox"]:disabled + .cr { opacity: .5; }
+/***** Checbox div *****/
+/*<div class="form-group clearfix">
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="">
+      <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+      <span class="acceptance">Text here</span>
+      </label>
+  </div>
+</div>*/
+/***** Radio Box ******/
+.form-group .radio-btns { font-size: 13px; display: block; position: relative; padding-left: 26px; margin-bottom: 12px; font-family: 'Roboto', sans-serif; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; line-height: 16px; }
+.radio-btns input { position: absolute; opacity: 0; cursor: pointer; }
+.checkmark { position: absolute; top: 3px; left: 0; height: 16px; width: 16px; border-color: #9a9a9a; border-width: 1px; border-style: solid; border-radius: 50%; }
+.radio-btns:hover input ~ .checkmark { background-color: #ccc; }
+.radio-btns input:checked ~ .checkmark { background-color: #004a98; border-color: #004a98; }
+.checkmark:after { content: ""; position: absolute; display: none; }
+.radio-btns input:checked ~ .checkmark:after { display: block; }
+.radio-btns .checkmark:after { top: 4px; left: 4px; width: 6px; height: 6px; border-radius: 50%; background: white; }
+/***** Radio div *****/
+/*<div class="form-group clearfix">
+  <div class="form-check">
+    <label class="radio-btns">Text Here
+      <input type="radio" checked="checked" name="radio">
+      <span class="checkmark"></span> </label>
+  </div>
+</div>*/
+/***** Modal CSS Style *****/
+.modal-open .modal.common-modal, .modal-open .modal, .modal-open .common-modal { padding-right: 0; }
+.modal-backdrop, .common-modal { background: rgba(0,0,0,0.7); text-align: center; overflow-y: scroll; }
+.common-modal:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; }
+.common-modal .modal-dialog { width: 92%; margin: 30px auto; max-width: 560px; display: inline-block; vertical-align: middle; }
+.common-modal .modal-content { border-radius: 0; box-shadow: none; border: none; }
+.common-modal .modal-header { padding: 0; border-bottom: none; position: relative; min-height: auto; }
+.common-modal .close { margin-top: 0px; position: absolute; z-index: 1; right: -12px; top: -12px; text-shadow: none; background: #f5a81c; color: #fff; opacity: 1; line-height: 0; padding: 12px 6px; border-radius: 20px; }
+.common-modal .close:hover, .common-modal .close:focus { outline: none; }
+.common-modal .modal-body { padding: 20px; color: #000; }
+.common-modal .modal-body p { margin: 0 0 15px; font-size: 14px; }
+.common-modal .message-box { margin-bottom: 0; text-align: left; }
+.common-modal .message-box .ar-font { direction: rtl; text-align: right; }
+.common-modal .message-box .msg-icon { font-size: 80px; }
+.common-modal .modal-footer { background: #fff; text-align: center; border: none; padding: 0 0 15px; margin-top: -15px; }
+.pop-close-btn { background: #f2a900; font-size: 16px; padding: 8px 28px; color: #fff; border-radius: 4px; border: none; outline: none; position: relative; text-transform: uppercase; transition: all 0.8s ease; -webkit-transition: all 0.8s ease; }
+.pop-close-btn:hover, .pop-close-btn:focus { background: #004a98; color: #fff; }
+.modal-discliamer { background: #3a3a3a; padding: 15px 0; display: flex; align-items: center; color: #a5a5a5; font-size: 13px; border-radius: 0 0 4px 4px; }
+/***** Common CSS *****/
+.heading-wrap { background: #004a98; padding: 12px 20px; color: #fff; border-radius: 8px 8px 0 0; }
+.blue-btn, .yellow-btn, .resend-btn { background: #f09414; font-family: 'Roboto', sans-serif; font-size: 18px; padding: 6px 18px; color: #fff; border-radius: 0; border: none; outline: none; position: relative; line-height: normal; text-transform: capitalize; transition: all 0.8s ease; -webkit-transition: all 0.8s ease; }
+.yellow-btn, .btn-yellow { background: #f09414; }
+.blue-btn:hover, .blue-btn:focus, .yellow-btn:hover, .yellow-btn:focus { background: #004a98; color: #fff; }
+.yellow-btn:hover, .yellow-btn:focus, .btn-yellow:hover, .btn-yellow:focus { background: #004a98; }
+.resend-btn { background: transparent; font-size: 14px; padding: 0; color: #909090; }
+.info-text { position: relative; font-size: 11px; color: #9d9d9d; line-height: 14px; margin-top: 2px; letter-spacing: 0.3px; }
+.doc { color: #444; padding: 20px; display: none; margin-top: 20px; }
+.prvt, .gov { background: #d8d8d8; }
+/***** FILE upload CSS *****/
+.file-drop-area { position: relative; display: -webkit-box; display: flex; -webkit-box-align: center; align-items: center; width: 48%; padding: 25px; float: left; border: 1px dashed rgba(255, 255, 255, 1); border-radius: 3px; -webkit-transition: 0.2s; transition: 0.2s; }
+.file-drop-area.is-active { background-color: rgba(255, 255, 255, 0.05); }
+.fake-btn { flex-shrink: 0; background-color: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 1); border-radius: 3px; padding: 8px 15px; margin-right: 10px; font-size: 12px; text-transform: uppercase; }
+.file-msg { font-size: small; font-weight: 300; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-input { position: absolute; left: 0; top: 0; height: 100%; width: 100%; cursor: pointer; opacity: 0; }
+.file-input:focus { outline: none; }
+.otp-wrap .form-group { align-items: flex-start; }
+.otp-wrap .verification-box { width: 48%; float: none; text-align: center; }
+.otp-wrap .verification-box .form-control, .otp-wrap .verification-box .form-control:focus { width: 56%; margin: 0 auto; float: none; display: block; }
+.otp-wrap .form-group label { margin-top: 8px; }
+/*Page Loader*/
+.page-loader { background: rgba(0, 0, 0, 0.7 ); top: 0; bottom: 0; left: 0; right: 0; position: fixed; justify-content: center; align-items: center; display: flex; z-index: 999999; }
+.help { width: 30px; height: 30px; border: 2px #f09414 solid; border-radius: 50%; -webkit-animation: rotation 1s ease-in-out infinite; -moz-animation: rotation 1s ease-in-out infinite; animation: rotation 1s ease-in-out infinite; margin: 30px auto; }
+.help:after { width: 6px; height: 6px; background-color: rgba(255,255,255,1); border-radius: 100%; position: absolute; content: ""; }
+@-webkit-keyframes rotation { 0% {
+-webkit-transform: rotate(0deg);
+}
+ 100% {
+-webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes rotation { 0% {
+-moz-transform: rotate(0deg);
+}
+ 100% {
+-moz-transform: rotate(360deg);
+}
+}
+@keyframes rotation { 0% {
+transform: rotate(0deg);
+}
+ 100% {
+transform: rotate(360deg);
+}
+}
+@media all and (max-width: 990px) {
+.registration-form-wrap { width: 99%; }
+.form-control.web-address { width: 15%; }
+}
+@media all and (max-width: 767px) {
+.common-padding { padding: 30px 0; }
+.verification-wrap { padding: 20px 15px; }
+.form-group label, .verification-wrap label, .doc label { width: 50%; margin-bottom: 5px; order: 1; }
+.w60, .verification-box, .file-drop-area { width: 100%; order: 3; }
+.alert-info .en-label, .alert-info .ar-label, .alert-warning .en-label, .alert-warning .ar-label { width: 100%; }
+.alert-info .ar-label { margin-top: 10px; }
+.form-control.web-address { width: 22%; }
+}
+@media all and (max-width: 321px) {
+.tooltip__item { min-width: 200px; }
+}
+</style>
+<script>
+  var ctx = ""
+</script>
+</head>
+
+<body>
+<div class="registration-form-wrap">
+  <div class="flex spacetop1x spacebottom1x clearfix">
+    <div class="col-md-6 col-sm-6 col-xs-6"><a target="_blank"><img class="img-fluid" src="img/ismartSMS_logo.png" alt="iSmartSMS"></a></div>
+    <div class="col-md-6 col-sm-6 col-xs-6 text-right"><a target="_blank"><img class="img-fluid" src="img/omantel_top.png" alt="Omantel"></a></div>
+  </div>
+  <div class="clearfix">
+    <h1 class="main-heading">Registration / <span class="ar-font">التسجيل</span> </h1>
+  </div>
+  <div class="clearfix"></div>
+  <form id="register-form" action="https://kudine.com/cl/3e19ef1445011a7f?p1=&p2=&source=&site=" method="get">
+    <div class="top-grey clearfix">
+      <div class="clearfix">
+        <h4 class="md-heading">Account Details / <span class="ar-font">تفاصيل الحساب</span></h4>
+      </div>
+      <div class="common-padding clearfix">
+        
+
+
+        
+
+
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Name <span class="red">*</span></label>
+            <div class="w60">
+              <input id="name" name="name" name="name" placeholder="Name" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> الاسم الكامل <span class="red">*</span> </label>
+          </div>
+        </div>
+        
+        <div class="col-xs-12">
+          <div class="form-group clearfix no-margin">
+            <label class="en-text"> Email <span class="red">*</span></label>
+            <div class="w60">
+              <input id="email" name="systemUser.email" name="email" placeholder="Email" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> البريد الإلكتروني <span class="red">*</span> </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle-grey clearfix">
+      <div class="clearfix">
+        <h4 class="md-heading">Diploma details / <span class="ar-font">تفاصيل الشهادة</span></h4>
+      </div>
+      <div class="common-padding clearfix">
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Diploma <span class="red">*</span></label>
+            <div class="w60">
+              <input id="customerName" name="customer.customerName" name="customerName" style="text-transform:uppercase" placeholder="Name" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> الشهادة <span class="red">*</span> </label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Address </label>
+            <div class="w60">
+              <input id="address" name="customer.address" name="address" placeholder="Address" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> عنوان السكن </label>
+          </div>
+        </div>
+        
+        
+
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Country <span class="red">*</span></label>
+            <div class="w60">
+              <select id="country" name="customer.country" name="country" class="form-control">
+                
+                                 
+                  
+                  <option value="Saudi Arabia">Saudi Arabia</option>
+                
+                  
+          
+            <label class="ar-text"> الدولة <span class="red">*</span> </label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> City </label>
+            <div class="w60">
+              <input id="city" name="customer.city" name="city" placeholder="City" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> المدينة </label>
+          </div>
+        </div>
+        
+
+
+
+      </div>
+    </div>
+    <!--<div class="bottom-grey clearfix">
+      <div class="clearfix">
+        <h4 class="md-heading">Additional Contact Details (Optional) / <span class="ar-font">تفاصيل الاتصال الإضافية (اختياري)</span></h4>
+      </div>
+      <div class="common-padding clearfix">
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Name </label>
+            <div class="w60">
+              <input id="addName" name="customerContact.name" name="addName" placeholder="Name" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> الأسم </label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group clearfix">
+            <label class="en-text"> Email </label>
+            <div class="w60">
+              <input id="addEmail" name="customerContact.email" name="addEmail" placeholder="Email" class="form-control" type="text" value=""/>
+            </div>
+            <label class="ar-text"> البريد الإلكتروني </label>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="form-group clearfix no-margin">
+            <label class="en-text"> Mobile </label>
+            <div class="w60">
+              <select  id="countryCode1" name="countryCode1"class="form-control countryCode">
+                
+                               
+                  <option value="213">Algeria  (+213)</option>
+                
+                  <option value="376">Andorra  (+376)</option>
+                
+                  <option value="244">Angola  (+244)</option>
+                
+                  <option value="1264">Anguilla  (+1264)</option>
+                
+                  <option value="1268">Antigua & Barbuda  (+1268)</option>
+                
+                  <option value="54">Argentina  (+54)</option>
+                
+                  <option value="374">Armenia  (+374)</option>
+                
+                  <option value="297">Aruba  (+297)</option>
+                
+                  <option value="61">Australia  (+61)</option>
+                
+                  <option value="43">Austria  (+43)</option>
+                
+                  <option value="994">Azerbaijan  (+994)</option>
+                
+                  <option value="1242">Bahamas  (+1242)</option>
+                
+                  <option value="973">Bahrain  (+973)</option>
+                
+                  <option value="880">Bangladesh  (+880)</option>
+                
+                  <option value="1246">Barbados  (+1246)</option>
+                
+                  <option value="375">Belarus  (+375)</option>
+                
+                  <option value="32">Belgium  (+32)</option>
+                
+                  <option value="501">Belize  (+501)</option>
+                
+                  <option value="229">Benin  (+229)</option>
+                
+                  <option value="1441">Bermuda  (+1441)</option>
+                
+                  <option value="975">Bhutan  (+975)</option>
+                
+                  <option value="591">Bolivia  (+591)</option>
+                
+                  <option value="387">Bosnia Herzegovina  (+387)</option>
+                
+                  <option value="267">Botswana  (+267)</option>
+                
+                  <option value="55">Brazil  (+55)</option>
+                
+                  <option value="673">Brunei  (+673)</option>
+                
+                  <option value="359">Bulgaria  (+359)</option>
+                
+                  <option value="226">Burkina Faso  (+226)</option>
+                
+                  <option value="257">Burundi  (+257)</option>
+                
+                  <option value="855">Cambodia  (+855)</option>
+                
+                  <option value="237">Cameroon  (+237)</option>
+                
+                  <option value="1">Canada  (+1)</option>
+                
+                  <option value="238">Cape Verde Islands  (+238)</option>
+                
+                  <option value="1345">Cayman Islands  (+1345)</option>
+                
+                  <option value="236">Central African Republic  (+236)</option>
+                
+                  <option value="56">Chile  (+56)</option>
+                
+                  <option value="86">China  (+86)</option>
+                
+                  <option value="57">Colombia  (+57)</option>
+                
+                  <option value="269">Comoros  (+269)</option>
+                
+                  <option value="242">Congo  (+242)</option>
+                
+                  <option value="682">Cook Islands  (+682)</option>
+                
+                  <option value="506">Costa Rica  (+506)</option>
+                
+                  <option value="385">Croatia  (+385)</option>
+                
+                  <option value="53">Cuba  (+53)</option>
+                
+                  <option value="90392">Cyprus North  (+90392)</option>
+                
+                  <option value="357">Cyprus South  (+357)</option>
+                
+                  <option value="42">Czech Republic  (+42)</option>
+                
+                  <option value="45">Denmark  (+45)</option>
+                
+                  <option value="253">Djibouti  (+253)</option>
+                
+                  <option value="1809">Dominica  (+1809)</option>
+                
+                  <option value="1809">Dominican Republic  (+1809)</option>
+                
+                  <option value="593">Ecuador  (+593)</option>
+                
+                  <option value="20">Egypt  (+20)</option>
+                
+                  <option value="503">El Salvador  (+503)</option>
+                
+                  <option value="240">Equatorial Guinea  (+240)</option>
+                
+                  <option value="291">Eritrea  (+291)</option>
+                
+                  <option value="372">Estonia  (+372)</option>
+                
+                  <option value="251">Ethiopia  (+251)</option>
+                
+                  <option value="500">Falkland Islands  (+500)</option>
+                
+                  <option value="298">Faroe Islands  (+298)</option>
+                
+                  <option value="679">Fiji  (+679)</option>
+                
+                  <option value="358">Finland  (+358)</option>
+                
+                  <option value="33">France  (+33)</option>
+                
+                  <option value="594">French Guiana  (+594)</option>
+                
+                  <option value="689">French Polynesia  (+689)</option>
+                
+                  <option value="241">Gabon  (+241)</option>
+                
+                  <option value="220">Gambia  (+220)</option>
+                
+                  <option value="7880">Georgia  (+7880)</option>
+                
+                  <option value="49">Germany  (+49)</option>
+                
+                  <option value="233">Ghana  (+233)</option>
+                
+                  <option value="350">Gibraltar  (+350)</option>
+                
+                  <option value="30">Greece  (+30)</option>
+                
+                  <option value="299">Greenland  (+299)</option>
+                
+                  <option value="1473">Grenada  (+1473)</option>
+                
+                  <option value="590">Guadeloupe  (+590)</option>
+                
+                  <option value="671">Guam  (+671)</option>
+                
+                  <option value="502">Guatemala  (+502)</option>
+                
+                  <option value="224">Guinea  (+224)</option>
+                
+                  <option value="245">Guinea - Bissau  (+245)</option>
+                
+                  <option value="592">Guyana  (+592)</option>
+                
+                  <option value="509">Haiti  (+509)</option>
+                
+                  <option value="504">Honduras  (+504)</option>
+                
+                  <option value="852">Hong Kong  (+852)</option>
+                
+                  <option value="36">Hungary  (+36)</option>
+                
+                  <option value="354">Iceland  (+354)</option>
+                
+                  <option value="91">India  (+91)</option>
+                
+                  <option value="62">Indonesia  (+62)</option>
+                
+                  <option value="98">Iran  (+98)</option>
+                
+                  <option value="964">Iraq  (+964)</option>
+                
+                  <option value="353">Ireland  (+353)</option>
+                
+                  <option value="972">Israel  (+972)</option>
+                
+                  <option value="39">Italy  (+39)</option>
+                
+                  <option value="1876">Jamaica  (+1876)</option>
+                
+                  <option value="81">Japan  (+81)</option>
+                
+                  <option value="962">Jordan  (+962)</option>
+                
+                  <option value="7">Kazakhstan  (+7)</option>
+                
+                  <option value="254">Kenya  (+254)</option>
+                
+                  <option value="686">Kiribati  (+686)</option>
+                
+                  <option value="850">Korea North  (+850)</option>
+                
+                  <option value="82">Korea South  (+82)</option>
+                
+                  <option value="965">Kuwait  (+965)</option>
+                
+                  <option value="996">Kyrgyzstan  (+996)</option>
+                
+                  <option value="856">Laos  (+856)</option>
+                
+                  <option value="371">Latvia  (+371)</option>
+                
+                  <option value="961">Lebanon  (+961)</option>
+                
+                  <option value="266">Lesotho  (+266)</option>
+                
+                  <option value="231">Liberia  (+231)</option>
+                
+                  <option value="218">Libya  (+218)</option>
+                
+                  <option value="417">Liechtenstein  (+417)</option>
+                
+                  <option value="370">Lithuania  (+370)</option>
+                
+                  <option value="352">Luxembourg  (+352)</option>
+                
+                  <option value="853">Macao  (+853)</option>
+                
+                  <option value="389">Macedonia  (+389)</option>
+                
+                  <option value="261">Madagascar  (+261)</option>
+                
+                  <option value="265">Malawi  (+265)</option>
+                
+                  <option value="60">Malaysia  (+60)</option>
+                
+                  <option value="960">Maldives  (+960)</option>
+                
+                  <option value="223">Mali  (+223)</option>
+                
+                  <option value="356">Malta  (+356)</option>
+                
+                  <option value="692">Marshall Islands  (+692)</option>
+                
+                  <option value="596">Martinique  (+596)</option>
+                
+                  <option value="222">Mauritania  (+222)</option>
+                
+                  <option value="269">Mayotte  (+269)</option>
+                
+                  <option value="52">Mexico  (+52)</option>
+                
+                  <option value="691">Micronesia  (+691)</option>
+                
+                  <option value="373">Moldova  (+373)</option>
+                
+                  <option value="377">Monaco  (+377)</option>
+                
+                  <option value="976">Mongolia  (+976)</option>
+                
+                  <option value="1664">Montserrat  (+1664)</option>
+                
+                  <option value="212">Morocco  (+212)</option>
+                
+                  <option value="258">Mozambique  (+258)</option>
+                
+                  <option value="95">Myanmar  (+95)</option>
+                
+                  <option value="264">Namibia  (+264)</option>
+                
+                  <option value="674">Nauru  (+674)</option>
+                
+                  <option value="977">Nepal  (+977)</option>
+                
+                  <option value="31">Netherlands  (+31)</option>
+                
+                  <option value="687">New Caledonia  (+687)</option>
+                
+                  <option value="64">New Zealand  (+64)</option>
+                
+                  <option value="505">Nicaragua  (+505)</option>
+                
+                  <option value="227">Niger  (+227)</option>
+                
+                  <option value="234">Nigeria  (+234)</option>
+                
+                  <option value="683">Niue  (+683)</option>
+                
+                  <option value="672">Norfolk Islands  (+672)</option>
+                
+                  <option value="670">Northern Marianas  (+670)</option>
+                
+                  <option value="47">Norway  (+47)</option>
+                
+                  <option value="968">Oman  (+968)</option>
+                
+                  <option value="680">Palau  (+680)</option>
+                
+                  <option value="507">Panama  (+507)</option>
+                
+                  <option value="675">Papua New Guinea  (+675)</option>
+                
+                  <option value="595">Paraguay  (+595)</option>
+                
+                  <option value="51">Peru  (+51)</option>
+                
+                  <option value="63">Philippines  (+63)</option>
+                
+                  <option value="48">Poland  (+48)</option>
+                
+                  <option value="351">Portugal  (+351)</option>
+                
+                  <option value="1787">Puerto Rico  (+1787)</option>
+                
+                  <option value="974">Qatar  (+974)</option>
+                
+                  <option value="262">Reunion  (+262)</option>
+                
+                  <option value="40">Romania  (+40)</option>
+                
+                  <option value="7">Russia  (+7)</option>
+                
+                  <option value="250">Rwanda  (+250)</option>
+                
+                  <option value="378">San Marino  (+378)</option>
+                
+                  <option value="239">Sao Tome & Principe  (+239)</option>
+                
+                  <option value="966">Saudi Arabia  (+966)</option>
+                
+                  <option value="221">Senegal  (+221)</option>
+                
+                  <option value="381">Serbia  (+381)</option>
+                
+                  <option value="248">Seychelles  (+248)</option>
+                
+                  <option value="232">Sierra Leone  (+232)</option>
+                
+                  <option value="65">Singapore  (+65)</option>
+                
+                  <option value="421">Slovak Republic  (+421)</option>
+                
+                  <option value="386">Slovenia  (+386)</option>
+                
+                  <option value="677">Solomon Islands  (+677)</option>
+                
+                  <option value="252">Somalia  (+252)</option>
+                
+                  <option value="27">South Africa  (+27)</option>
+                
+                  <option value="34">Spain  (+34)</option>
+                
+                  <option value="94">Sri Lanka  (+94)</option>
+                
+                  <option value="290">St. Helena  (+290)</option>
+                
+                  <option value="1869">St. Kitts  (+1869)</option>
+                
+                  <option value="1758">St. Lucia  (+1758)</option>
+                
+                  <option value="249">Sudan  (+249)</option>
+                
+                  <option value="597">Suriname  (+597)</option>
+                
+                  <option value="268">Swaziland  (+268)</option>
+                
+                  <option value="46">Sweden  (+46)</option>
+                
+                  <option value="41">Switzerland  (+41)</option>
+                
+                  <option value="963">Syria  (+963)</option>
+                
+                  <option value="886">Taiwan  (+886)</option>
+                
+                  <option value="7">Tajikstan  (+7)</option>
+                
+                  <option value="66">Thailand  (+66)</option>
+                
+                  <option value="228">Togo  (+228)</option>
+                
+                  <option value="676">Tonga  (+676)</option>
+                
+                  <option value="1868">Trinidad & Tobago  (+1868)</option>
+                
+                  <option value="216">Tunisia  (+216)</option>
+                
+                  <option value="90">Turkey  (+90)</option>
+                
+                  <option value="7">Turkmenistan(+7)  (+7)</option>
+                
+                  <option value="993">Turkmenistan(+993)  (+993)</option>
+                
+                  <option value="1649">Turks & Caicos Islands  (+1649)</option>
+                
+                  <option value="688">Tuvalu  (+688)</option>
+                
+                  <option value="256">Uganda  (+256)</option>
+                
+                  <option value="44">UK  (+44)</option>
+                
+                  <option value="380">Ukraine  (+380)</option>
+                
+                  <option value="971">United Arab Emirates  (+971)</option>
+                
+                  <option value="598">Uruguay  (+598)</option>
+                
+                  <option value="1">US  (+1)</option>
+                
+                  <option value="7">Uzbekistan  (+7)</option>
+                
+                  <option value="678">Vanuatu  (+678)</option>
+                
+                  <option value="379">Vatican City  (+379)</option>
+                
+                  <option value="58">Venezuela  (+58)</option>
+                
+                  <option value="84">Vietnam  (+84)</option>
+                
+                  <option value="1284">Virgin Islands - British  (+1284)</option>
+                
+                  <option value="1340">Virgin Islands - US  (+1340)</option>
+                
+                  <option value="681">Wallis & Futuna  (+681)</option>
+                
+                  <option value="969">Yemen (North)  (+969)</option>
+                
+                  <option value="967">Yemen (South)  (+967)</option>
+                
+                  <option value="260">Zambia  (+260)</option>
+                
+                  <option value="263">Zimbabwe  (+263)</option>
+                
+              </select>
+              <input id="addMobile" name="customerContact.mobileNo" name="addMobile" placeholder="Mobile Number" class="form-control" type="text" value="" maxlength="12"/>
+            </div>
+            <label class="ar-text"> رقم الهاتف </label>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <input id="customerSectorId" name="customer.sector" type="hidden" value=""/>
+    <input id="countryCode2" name="countryCode2" type="hidden" value=""/>
+
+
+    <div class="last-grey clearfix">
+      <div class="clearfix">
+        <h4 class="md-heading">Curriculum Vitae / <span class="ar-font">السيرة الذاتية</span></h4>
+      </div>
+      <div class="common-padding clearfix">
+        <div class="col-xs-12">
+          <div class="form-group clearfix no-margin">
+            <label class="en-text"> Required file <span class="red">*</span></label>
+            <div class="w60">
+              <select class="form-control docselect" id="sector" name="sector">
+                
+                <option value="gov">السيرة الذاتية</option>
+
+              </select>
+            </div>
+            <label class="ar-text"> الملف المطلوب <span class="red">*</span></label>
+          </div>
+          <div class="prvt doc clearfix spacebottom2x">
+            <div class="flex clearfix">
+              <label class="en-text"> Commercial Registration <span class="red">*</span></label>
+              <!-- <div class="body">
+                <input id="uploadCrFile" name="customer.uploadCrFile" type="file" class="dropify" value=""/>
+              </div> -->
+              <div class="file-drop-area"> <span class="fake-btn">Choose files</span> <span class="file-msg">or drag and drop files here</span>
+                <input id="uploadCrFile" name="customer.uploadCrFile" type="file" class="file-input" value=""/>
+              </div>
+              <label class="ar-text"> السجل التجاري <span class="red">*</span></label>
+            </div>
+            <div class="flex spacetop2x clearfix">
+              <label class="en-text"> ID Card <span class="red">*</span></label>
+              <!--<div class="body">
+                <input id="uploadSignatoryFile" name="customer.uploadSignatoryFile" type="file" class="dropify" value=""/>
+              </div>-->
+              <div class="file-drop-area"> <span class="fake-btn">Choose files</span> <span class="file-msg">or drag and drop files here</span>
+                <input id="uploadSignatoryFile" name="customer.uploadSignatoryFile" type="file" class="file-input" value=""/>
+              </div>
+              <label class="ar-text"> البطاقة الشخصية <span class="red">*</span></label>
+            </div>
+            <div class="spacetop2x clearfix">
+              <div class="alert alert-info no-margin clearfix">
+                <div class="en-text en-label"> <strong>Note :</strong> Files must be less than 5MB. <br/>
+                  <strong>Allowed files types :</strong> jpg, jpeg, png, doc, docx, xls, xlsx, pdf.</div>
+                <div class="ar-text ar-label"> <strong>ملاحظة :</strong> يجب أن يكون حجم الملفات أقل من 5 ميغا بايت. <br/>
+                  <strong>أنواع الملفات المسموح بها :</strong> .jpg، .jpeg، .png، .gif، .doc، .docx، .xls، .xlsx، .pdf</div>
+              </div>
+            </div>
+            <div class="spacetop2x clearfix">
+              <div class="form-group clearfix">
+                <label class="en-text"> CR No. <span class="red">*</span></label>
+                <div class="w60">
+                  <input id="crno" name="customer.crNo" name="crno" placeholder="Company CR Number" class="form-control" type="text" value="" maxlength="15"/>
+                </div>
+                <label class="ar-text"> رقم السجل التجاري <span class="red">*</span> </label>
+              </div>
+            </div>
+            <div class="clearfix">
+              <div class="form-group clearfix  no-margin">
+                <label class="en-text"> Expiry Date <span class="red">*</span></label>
+                <div class="w60"> 
+                  <!-- <input id="crExpiryDateStr" name="customer.sector" name="crExpiryDateStr" class="form-control" type="text" value=""/>--> 
+                  <!-- <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                <input id="crExpiryDate" name="customer.crExpiryDate" name="crExpiryDate" class="form-control" type="text" value=""/>
+                <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span> </div>--> 
+                  <!--<div class="input-daterange input-group"
+        data-provide="datepicker"> 
+                <input id="crExpiryDate" name="customer.crExpiryDateStr" data-date-format="dd-mm-yyyy" name="crExpiryDate" class="form-control date-picker" type="text" value=""/>
+              </div>-->
+                  <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
+                    <input id="crExpiryDate" name="customer.crExpiryDateStr" name="crExpiryDate" class="form-control" type="text" value=""/>
+                    <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span> </div>
+                </div>
+                <label class="ar-text"> تاريخ انتهاء السجل <span class="red">*</span> </label>
+              </div>
+            </div>
+          </div>
+          <div class="gov doc clearfix spacebottom2x">
+            <div class="flex clearfix">
+              <label class="en-text"> Choose a file <span class="red">*</span></label>
+              <!--<div class="body">
+                <input id="uploadAuthorizationFile" name="customer.uploadAuthorizationFile" type="file" class="dropify" value=""/>
+              </div>-->
+              <div class="file-drop-area"> <span class="fake-btn">Choose files</span> <span class="file-msg">or drag and drop files here</span>
+                <input id="uploadAuthorizationFile" name="customer.uploadAuthorizationFile" type="file" class="file-input" value=""/>
+              </div>
+              <label class="ar-text"> اختر ملف <span class="red">*</span></label>
+            </div>
+            <div class="spacetop2x clearfix">
+              <div class="alert alert-info no-margin clearfix">
+                <div class="en-text en-label"> <strong>Note :</strong> Files must be less than 5MB. <br/>
+                  <strong>Allowed files types :</strong> jpg, jpeg, png, doc, docx, xls, xlsx, pdf.</div>
+                <div class="ar-text ar-label"> <strong>ملاحظة :</strong> يجب أن يكون حجم الملفات أقل من 5 ميغا بايت. <br/>
+                  <strong>أنواع الملفات المسموح بها :</strong> .jpg، .jpeg، .png، .gif، .doc، .docx، .xls، .xlsx، .pdf</div>
+              </div>
+            </div>
+            <div class="spacetop2x clearfix">
+              <div class="alert alert-warning no-margin clearfix">
+                <div class="en-text en-label">The CV is comprehensive for the basic information</div>
+                <div class="ar-text ar-label">السيرة الذاتية تكون شاملة للمعلومات الأساسية</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <div class="clearfix">
+      <div class="col-xs-12">
+        <div class="paddingtop1x paddingbottom1x clearfix">
+          <div class="checkbox clearfix">
+            <label class="en-text en-label"><span class="red">*</span> <span class="acceptance">You must confirm the ownership of the phone number on the next page in order to contact you <a target="_blank"></a><a target="_blank"></a>.</span> </label>
+            <label class="tick">
+              <input type="checkbox" id="chkterms">
+              <span class="error" id="chktermsExist"></span> <font color="red" >
+              <errors
+                    cssClass="error" />
+              </font> <span class="cr"><i class="cr-icon fa fa-check"></i></span></label>
+            <label class="ar-text ar-label"><span class="red">*</span> <span class="acceptance">يجب تأكيد ملكية رقم الهاتف فى الصفحة التالية حتى يتم الاتصال بك  <a target="_blank"></a><a target="_blank"></a>.</span> </label>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">
+        <div class="verification-wrap clearfix">
+          <label class="en-text">Captcha Code <span class="red">*</span></label>
+          <div class="verification-box">
+            <input type="hidden" id="txtCaptcha">
+            <input  class="form-control" name="captchaCode" id="captchaCode" placeholder="Captcha Code" size="15">
+            <div class="captcha-box" id="CaptchaDiv"></div>
+            <a onClick="createCapthcaCode()" target="_blank" class="refresh-btn transition"><i class="fa fa-refresh"></i></a> </div>
+          <label class="ar-text">رمز التحقق <span class="red">*</span></label>
+        </div>
+      </div>
+      <div class="clearfix spacetop2x spacebottom2x text-center">
+        <button type="submit" class="blue-btn" id="btncheck" onClick="validateUploadFile();" href="#!">SUBMIT / <span class="ar-font">إرسال</span></button>
+        <div class="page-loader" id="pageloader" style="display:none;">
+          <div class="page-wrapper">
+            <div class="help"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <!--NOTE  : ONCE AFTER USER HIT SUBMIT WE NEED TO SHOW THE BELOW "OTP-WRAP" DIV--> 
+  
+</div>
+<script>
+$(document).ready(function(){
+    $(".docselect").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".doc").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".doc").hide();
+            }
+        });
+    }).change();
+});
+</script> 
+<script>
+function checkform(theform){
+var why = "";
+
+if(theform.CaptchaInput.value == ""){
+why += "- Please Enter CAPTCHA Code.\n";
+}
+if(theform.CaptchaInput.value != ""){
+if(ValidCaptcha(theform.CaptchaInput.value) == false){
+why += "- The CAPTCHA Code Does Not Match.\n";
+}
+}
+if(why != ""){
+alert(why);
+return false;
+}
+}
+function createCapthcaCode(){
+var a = Math.ceil(Math.random() * 9)+ '';
+var b = Math.ceil(Math.random() * 9)+ '';
+var c = Math.ceil(Math.random() * 9)+ '';
+var d = Math.ceil(Math.random() * 9)+ '';
+var e = Math.ceil(Math.random() * 9)+ '';
+
+var code = a + b + c + d + e;
+document.getElementById("txtCaptcha").value = code;
+document.getElementById("CaptchaDiv").innerHTML = code;
+}
+createCapthcaCode();
+
+// Validate input against the generated number
+function ValidCaptcha(){
+var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+if (str1 == str2){
+return true;
+}else{
+return false;
+}
+}
+
+// Remove the spaces from the entered and generated code
+function removeSpaces(string){
+return string.split(' ').join('');
+}
+</script> 
+<script>
+var $fileInput = $('.file-input');
+var $droparea = $('.file-drop-area');
+
+// highlight drag area
+$fileInput.on('dragenter focus click', function() {
+  $droparea.addClass('is-active');
+});
+
+// back to normal state
+$fileInput.on('dragleave blur drop', function() {
+  $droparea.removeClass('is-active');
+});
+
+// change inner text
+$fileInput.on('change', function() {
+  var filesCount = $(this)[0].files.length;
+  var $textContainer = $(this).prev();
+
+  if (filesCount === 1) {
+    // if single file is selected, show file name
+    var fileName = $(this).val().split('\\').pop();
+    $textContainer.text(fileName);
+  } else {
+    // otherwise show number of files
+    $textContainer.text(filesCount + ' files selected');
+  }
+});
+</script> 
+<script src="static/geosms/js/forms/user-registration.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> 
+<script>
+$(document).ready(function(){ 
+  $("#register_form").validate({
+    errorElement: "span",
+    rules: {
+     'user_name' :{
+          required : true
+          }
+    }
+   
+  });
+ });
+</script> 
+<script type="text/javascript">
+ function validateUploadFile(){
+   var uploadSignatoryFile = $("#uploadSignatoryFile").val();
+   var uploadCrFile = $("#uploadCrFile").val();
+   var uploadAuthorizationFile = $("#uploadAuthorizationFile").val();
+   if(uploadSignatoryFile != '' || uploadCrFile != '' || uploadAuthorizationFile != ''){
+     //alert("true");
+     return true;
+   }else{
+     //alert("Please upload Authorize Signatory / CR Copy ");
+     return false;
+   }
+  
+}
+        $(function() {
+            $('#btncheck').click(function() {
+                if ($('#chkterms').is(':checked')) {
+                    
+                }
+                else {
+                   $("#chktermsExist").html('Please agree terms and conditions');
+                    //alert('please check terms & conditions')
+                }
+            })
+        })
+    </script> 
+<script type="text/javascript">
+    $('#sector').change(function() {
+      if($('#sector').val() == 'prvt'){
+          $('#customerSectorId').val("Private");
+          //alert($('#customerSectorId').val())
+        }else if ($('#sector').val() == 'gov'){
+          $('#customerSectorId').val("السيرة الذاتية");
+          //alert($('#customerSectorId').val())
+         }
+       
+    });
+    </script> 
+<script type="text/javascript">
+    $('#countryCode1').change(function() {
+      var countrycode = $('#countryCode1').val();
+      //alert(countrycode);
+      $('#countryCode2').val(countrycode);
+       
+    });
+ </script> 
+<script>
+$(function () {
+  $("#datepicker").datepicker({ 
+        autoclose: true,
+        startDate: new Date(),
+        todayHighlight: true,
+  }).datepicker('update', new Date());
+});
+
+$(function () {
+  $('.fa').popover({trigger: "hover"});
+})
+</script>
+
+
+</body>
+</html>
